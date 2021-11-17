@@ -45,9 +45,9 @@ public class ConvertOutHtmlDeprecated extends AbstractSample {
 
 	// Config for non-command line version
 	static {
-	
-    	inputfilepath = System.getProperty("user.dir") + "/sample-docs/sample-docxv2.docx";
-		
+
+    	inputfilepath = System.getProperty("user.dir") + "/sample-docs/心理咨询的基本要求.docx";
+
 		save = true;
 	}
 
@@ -73,21 +73,21 @@ public class ConvertOutHtmlDeprecated extends AbstractSample {
     	htmlSettings.setImageDirPath(inputfilepath + "_files");
     	htmlSettings.setImageTargetUri(inputfilepath.substring(inputfilepath.lastIndexOf("/")+1)
     			+ "_files");
-    	
+
 //    	htmlSettings.setUserBodyTop("<H1>TOP!</H1>");
 //    	htmlSettings.setUserBodyTail("<H1>TAIL!</H1>");
-		
+
 		// Sample sdt tag handler (tag handlers insert specific
 		// html depending on the contents of an sdt's tag).
 		// This will only have an effect if the sdt tag contains
 		// the string @class=XXX
 //			SdtWriter.registerTagHandler("@class", new TagClass() );
-		
+
 //		SdtWriter.registerTagHandler(Containerization.TAG_BORDERS, new TagSingleBox() );
 //		SdtWriter.registerTagHandler(Containerization.TAG_SHADING, new TagSingleBox() );
-		
-		// exporter writes to a Result object.		
-		OutputStream os; 
+
+		// exporter writes to a Result object.
+		OutputStream os;
 		if (save) {
 			os = new java.io.FileOutputStream(inputfilepath + ".html");
 		} else {
